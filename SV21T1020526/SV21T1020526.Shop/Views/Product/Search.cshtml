@@ -1,0 +1,79 @@
+﻿@model SV21T1020526.Shop.Models.ProductSearchResult
+@{
+	Layout = null;
+}
+
+
+<!-- Products -->
+<div class="main_content">
+	<div class="products_iso">
+		<div class="row">
+			<div class="col">
+
+
+				<!-- Product Grid -->
+
+				<div class="product-grid">
+
+					<!-- Product 1 -->
+					@foreach (var item in Model.Data)
+					{
+						
+						<div class="product-item men">
+							<div class="product discount product_filter">
+								<div class="product_image">
+									<img src="~/images/product/@item.Photo" alt="">
+								</div>
+								<div class="favorite favorite_left"></div>
+								@* <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div> *@
+								<div class="product_info">
+									<h6 class="product_name"><a href="~/Product/ProductDetail/@item.ProductID">@item.ProductName</a></h6>
+									<div class="product_price">@item.Price</div>
+								</div>
+							</div>
+							<div class="red_button add_to_cart_button"><a href="#" class="btnAddToCart" data-id="@item.ProductID">add to cart</a></div>
+						</div>
+					}
+
+
+
+				</div>
+
+				<!-- Product Sorting -->
+
+
+
+
+
+
+			</div>
+
+		</div>
+
+	</div>
+	<nav aria-label="Page navigation example">
+		<ul class="pagination justify-content-center">
+			@for (int p = 1; p <= Model.PageCount; p++)
+			{
+				if (p == Model.Page)
+				{
+					<li class="page-item"><a class="page-link" href="#">@p</a></li>
+				}
+				else
+				{
+					<li class="page-item"><a class="page-link" href="javascript:;" onclick="doSearch(@p)">@p</a></li>
+				}
+			}
+			
+			
+			
+			
+		</ul>
+	</nav>
+	<!-- page cout -->
+	
+</div>
+
+
+<script src="~/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="~/js/categories_custom.js"></script>

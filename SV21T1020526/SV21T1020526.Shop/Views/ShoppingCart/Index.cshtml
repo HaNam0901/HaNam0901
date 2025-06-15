@@ -1,0 +1,224 @@
+﻿@model IEnumerable<CartItem>
+
+@{
+    ViewBag.Title = "Danh sách đơn hàng";
+    int stt = 0;
+    decimal sumOfPrice = 0;
+}
+
+<div class="box box-primary" style="margin:200px;">
+    <div class="box-body" >
+
+      
+     
+
+        <!-- Thông tin giỏ hàng, khách hàng -->
+        <div class="col-md-8" id="cart-container">
+            <!-- Giỏ hàng -->
+            <h4>Danh sách mặt hàng đã chọn</h4>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr class="bg-primary">
+                        <th class="text-center">STT</th>
+                        <th class="text-center">Tên hàng</th>
+                        <th class="text-center">ĐVT</th>
+                        <th class="text-center">Số lượng</th>
+                        <th class="text-center">Giá</th>
+                        <th class="text-center">Thành tiền</th>
+                        <th style="width:40px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Count() > 0)
+                    {
+                        @foreach (var item in Model)
+                        {
+                            sumOfPrice += item.TotalPrice;
+                            <tr>
+                                <td class="text-center">@(++stt)</td>
+                                <td>@item.ProductName</td>
+                                <td class="text-center">@item.Unit</td>
+                                <td class="text-center">@item.Quantity</td>
+                                <td class="text-right">@item.SalePrice.ToString("N0")</td>
+                                <td class="text-right">@item.TotalPrice.ToString("N0")</td>
+                                <td class="text-right">
+                                    <a href="~/ShoppingCart/RemoveFromCart/@item.ProductID"
+                                       class="btn btn-xs btn-danger ajax-link btnRemoveFromCart">
+                                        <i class="fa fa-minus"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="7" class="text-center">
+                                <p>Giỏ hàng trống</p>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="5" class="text-right">Tổng cộng:</th>
+                        <th class="text-right">@sumOfPrice.ToString("N0")</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="text-right">
+                <a href="~/ShoppingCart/ClearCart" class="btn btn-sm btn-danger ajax-link btnClearCart">
+                    <i class="fa fa-trash"></i> Xóa giỏ hàng
+                </a>
+            </div>
+
+                
+
+
+            <!-- Nhập khách hàng, nhân viên phụ trách và khởi tạo đơn hàng -->
+            <form action="~/ShoppingCart/Save" method="post" class="form-horizontal" id="frmOrderInit">
+                <h4>Thông tin về khách hàng và địa chỉ giao hàng</h4>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Tên khách hàng:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="deliveryAddress" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Tỉnh/thành:</label>
+                    <div class="col-sm-10">
+                        <select class="form-control select2" name="deliveryProvince">
+                            <option value="0">-- Chọn tỉnh/thành --</option>
+                            @foreach (var item in SV21T1020526.BusinessLayers.CommonDataService.ListOfProvinces())
+                            {
+                                <option value="@item.ProvinceName">@item.ProvinceName</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Địa chỉ nhận hàng:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="deliveryAddress" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-offset-2 col-sm-10">
+                        <span id="error-message" style="color:#f00"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-sm btn-primary">
+                            <i class="fa fa-plus-circle"></i> Lập đơn hàng
+                        </button>
+                        <a href="~/ShoppingCart/OrderStatus" class="btn btn-sm btn-primary">
+                       Theo dõi đơn hàng
+                    </a>
+                    </div>
+                </div>
+            </form>
+            
+           
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        function showShoppingCart(){
+            $.ajax({
+                url: "ShoppingCart",
+                type: 'GET',
+                success: function (data) {
+                    $("#shoppingCart").html(data);
+                }
+            });
+        }
+
+        function doSearch(page) {
+            var searchCondition = $("#frmSearchInput").serializeArray();
+            searchCondition.push({ name: "page", value: page });
+
+            var action = $("#frmSearchInput").prop("action");
+            var method = $("#frmSearchInput").prop("method");
+
+            $.ajax({
+                url: action,
+                type: method,
+                data: searchCondition,
+                success: function (data) {
+                    $("#searchResult").html(data);
+                }
+            });
+        }
+
+      
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+    <script>
+        $('.number-separator').inputmask({
+            alias: "numeric",
+            groupSeparator: ",",       // Dấu phẩy phân cách phần nghìn
+            autoGroup: true,           // Tự động thêm dấu phân cách
+            digits: 0,                 // Không có chữ số thập phân
+            removeMaskOnSubmit: true   // Loại bỏ ký tự phân cách phần nghìn khi submit form
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".ajax-link").click(function (e) {
+                e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+
+                if (!confirm("Xóa mặt hàng ra khỏi giỏ hàng?")) {
+                    return;
+                }
+
+                $.ajax({
+                    url: $(this).prop("href"), // URL lấy từ liên kết
+                    type: "GET",
+                    success: function (data) {
+                        console.log(data.Success)
+                        
+                            console.log("ok")
+                            // Gọi lại giỏ hàng để cập nhật giao diện
+                            window.location.href = "/ShoppingCart";
+                       
+                    },
+                    error: function () {
+                        alert("Có lỗi xảy ra khi xóa sản phẩm.");
+                    }
+                });
+            });
+        });
+         $(document).ready(function () {
+          
+
+            $("#frmOrderInit").submit(function (e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url: $(this).prop("action"),
+                    type: $(this).prop("method"),
+                    data: $(this).serializeArray(),
+                    success: function(result){
+                        if (isNaN(result)) {
+                            $("#error-message").html(result);
+                        }else{
+                            window.location.href = "ShoppingCart/OrderStatus" ;
+                        }
+                            
+                    }
+                });
+            });
+        });
+       
+    </script>
+    
+    
+
+}

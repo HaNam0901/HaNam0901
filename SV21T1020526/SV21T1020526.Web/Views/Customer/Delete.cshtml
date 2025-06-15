@@ -1,0 +1,56 @@
+﻿@model SV21T1020526.DomainModels.Customer;
+@{
+    ViewBag.Title = "Xóa Khách hàng";
+
+}
+<div class="box box-danger">
+    <div class="box-body">
+        <form action="~/Customer/Delete/@Model.CustomerId" method="post">
+            <div class="form-group">
+                <label>Tên khách hàng:</label>
+                <p class="form-control form-control-static" >@Model.CustomerName</p>
+            </div>
+            <div class="form-group">
+                <label>Tên giao dịch:</label>
+                <p class="form-control form-control-static">@Model.ContactName</p>
+
+            </div>
+            <div class="form-group">
+                <label>Điện thoại:</label>
+                <p class="form-control form-control-static">@Model.Phone</p>
+
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <p class="form-control form-control-static">@Model.Email</p>
+
+            </div>
+            <div class="form-group">
+                <label>Địa chỉ:</label>
+                <p class="form-control form-control-static">@Model.Address</p>
+ 
+            </div>
+
+            <div class="form-group">
+                <label>Tỉnh thành:</label>
+                <p class="form-control form-control-static">@Model.Province</p>
+            </div>
+
+            <div class="form-group">
+                <label>Trạng thái:</label>
+                <p class="form-control form-control-static">@(Model.IsLocked ? "tài khoản bị khóa":"tài khoản hoạt động")</p>
+            </div>
+            <div class="form-group text-right">
+                @if (!SV21T1020526.BusinessLayers.CommonDataService.InUsedCustomer(Model.CustomerId))
+                {
+                <button type="submit" class="btn btn-danger">Xác nhận Xóa</button>
+                    
+                }
+                <a href="~/Customer" class="btn btn-default">Quay lại</a>
+
+
+            </div>
+        </form>
+    </div>
+
+</div>

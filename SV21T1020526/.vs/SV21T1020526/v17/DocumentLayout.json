@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DHNam\\SV21T1020526\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0591E1F5-3B06-4F9C-98CA-3CBF79F837EA}|SV21T1020526.Web\\SV21T1020526.Web.csproj|d:\\dhnam\\sv21t1020526\\sv21t1020526.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0591E1F5-3B06-4F9C-98CA-3CBF79F837EA}|SV21T1020526.Web\\SV21T1020526.Web.csproj|solutionrelative:sv21t1020526.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08C8F388-7035-4349-9C80-4887AEE12EB7}|SV21T1020526.Shop\\SV21T1020526.Shop.csproj|d:\\dhnam\\sv21t1020526\\sv21t1020526.shop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{08C8F388-7035-4349-9C80-4887AEE12EB7}|SV21T1020526.Shop\\SV21T1020526.Shop.csproj|solutionrelative:sv21t1020526.shop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08C8F388-7035-4349-9C80-4887AEE12EB7}|SV21T1020526.Shop\\SV21T1020526.Shop.csproj|d:\\dhnam\\sv21t1020526\\sv21t1020526.shop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08C8F388-7035-4349-9C80-4887AEE12EB7}|SV21T1020526.Shop\\SV21T1020526.Shop.csproj|solutionrelative:sv21t1020526.shop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1474E10F-D207-40EE-B347-B9B582AFD72A}|SV21T1020526.BusinessLayers\\SV21T1020526.BusinessLayers.csproj|d:\\dhnam\\sv21t1020526\\sv21t1020526.businesslayers\\orderdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1474E10F-D207-40EE-B347-B9B582AFD72A}|SV21T1020526.BusinessLayers\\SV21T1020526.BusinessLayers.csproj|solutionrelative:sv21t1020526.businesslayers\\orderdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1474E10F-D207-40EE-B347-B9B582AFD72A}|SV21T1020526.BusinessLayers\\SV21T1020526.BusinessLayers.csproj|d:\\dhnam\\sv21t1020526\\sv21t1020526.businesslayers\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1474E10F-D207-40EE-B347-B9B582AFD72A}|SV21T1020526.BusinessLayers\\SV21T1020526.BusinessLayers.csproj|solutionrelative:sv21t1020526.businesslayers\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1474E10F-D207-40EE-B347-B9B582AFD72A}|SV21T1020526.BusinessLayers\\SV21T1020526.BusinessLayers.csproj|d:\\dhnam\\sv21t1020526\\sv21t1020526.businesslayers\\commondatasevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1474E10F-D207-40EE-B347-B9B582AFD72A}|SV21T1020526.BusinessLayers\\SV21T1020526.BusinessLayers.csproj|solutionrelative:sv21t1020526.businesslayers\\commondatasevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08C8F388-7035-4349-9C80-4887AEE12EB7}|SV21T1020526.Shop\\SV21T1020526.Shop.csproj|d:\\dhnam\\sv21t1020526\\sv21t1020526.shop\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08C8F388-7035-4349-9C80-4887AEE12EB7}|SV21T1020526.Shop\\SV21T1020526.Shop.csproj|solutionrelative:sv21t1020526.shop\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 233,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\DHNam\\SV21T1020526\\SV21T1020526.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "SV21T1020526.Web\\appsettings.json",
+              "ToolTip": "D:\\DHNam\\SV21T1020526\\SV21T1020526.Web\\appsettings.json",
+              "RelativeToolTip": "SV21T1020526.Web\\appsettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvwgAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-07T00:09:38.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\DHNam\\SV21T1020526\\SV21T1020526.Shop\\appsettings.json",
+              "RelativeDocumentMoniker": "SV21T1020526.Shop\\appsettings.json",
+              "ToolTip": "D:\\DHNam\\SV21T1020526\\SV21T1020526.Shop\\appsettings.json",
+              "RelativeToolTip": "SV21T1020526.Shop\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-24T03:00:18.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DHNam\\SV21T1020526\\SV21T1020526.Shop\\Program.cs",
+              "RelativeDocumentMoniker": "SV21T1020526.Shop\\Program.cs",
+              "ToolTip": "D:\\DHNam\\SV21T1020526\\SV21T1020526.Shop\\Program.cs",
+              "RelativeToolTip": "SV21T1020526.Shop\\Program.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwEAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T02:59:53.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderDataService.cs",
+              "DocumentMoniker": "D:\\DHNam\\SV21T1020526\\SV21T1020526.BusinessLayers\\OrderDataService.cs",
+              "RelativeDocumentMoniker": "SV21T1020526.BusinessLayers\\OrderDataService.cs",
+              "ToolTip": "D:\\DHNam\\SV21T1020526\\SV21T1020526.BusinessLayers\\OrderDataService.cs",
+              "RelativeToolTip": "SV21T1020526.BusinessLayers\\OrderDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T02:59:12.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "D:\\DHNam\\SV21T1020526\\SV21T1020526.BusinessLayers\\Configuration.cs",
+              "RelativeDocumentMoniker": "SV21T1020526.BusinessLayers\\Configuration.cs",
+              "ToolTip": "D:\\DHNam\\SV21T1020526\\SV21T1020526.BusinessLayers\\Configuration.cs",
+              "RelativeToolTip": "SV21T1020526.BusinessLayers\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T02:59:09.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CommonDataSevice.cs",
+              "DocumentMoniker": "D:\\DHNam\\SV21T1020526\\SV21T1020526.BusinessLayers\\CommonDataSevice.cs",
+              "RelativeDocumentMoniker": "SV21T1020526.BusinessLayers\\CommonDataSevice.cs",
+              "ToolTip": "D:\\DHNam\\SV21T1020526\\SV21T1020526.BusinessLayers\\CommonDataSevice.cs",
+              "RelativeToolTip": "SV21T1020526.BusinessLayers\\CommonDataSevice.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T02:58:36.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\DHNam\\SV21T1020526\\SV21T1020526.Shop\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "SV21T1020526.Shop\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\DHNam\\SV21T1020526\\SV21T1020526.Shop\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "SV21T1020526.Shop\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T01:29:07.745Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

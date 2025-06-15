@@ -1,0 +1,29 @@
+﻿img.user-image {
+   
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: -2px;
+}
+span.hidden-xs{
+    color:white;
+}
+.navbar-nav > .user-menu > .dropdown-menu > li.user-header {
+    height: 175px;
+    padding: 10px;
+    text-align: center;
+}
+li.user-header {
+    height: 175px;
+    padding: 10px;
+    text-align: center;
+}
+p {
+   
+    font-size: 17px;
+    margin-top: 10px;
+}
+a.btn.btn-default.btn-flat {
+    color: #666666;
+}

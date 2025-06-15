@@ -1,0 +1,78 @@
+﻿
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<!-- New Arrivals -->
+
+<div class="new_arrivals">
+	<div class="row">
+		<div class="col text-center">
+			<div class="section_title new_arrivals_title">
+				<h2>mặt hàng</h2>
+			</div>
+		</div>
+	</div>
+	<div class="row align-items-center">
+		<div class="col text-center">
+			<div class="new_arrivals_sorting">
+				<ul class="arrivals_grid_sorting clearfix button-group filters-button-group">
+					@foreach(var item in SV21T1020526.BusinessLayers.CommonDataService.ListOfCategorys()){
+
+						<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center">
+							<a href="javascript:void(0);"
+							class="category-link"
+							data-categoryid="@item.CategoryId">
+								@item.CategoryName
+							</a>
+						</li>
+					}
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="searchResult"></div>
+</div>
+
+
+<!-- gợi ý hôm nay-->
+
+
+@section scripts {
+	<script>
+				$(document).ready(function () {
+			// Lắng nghe sự kiện click trên các link loại hàng
+			$(".category-link").click(function (e) {
+				e.preventDefault(); // Ngăn điều hướng mặc định
+
+				var categoryId = $(this).data("categoryid"); // Lấy CategoryID từ thuộc tính data
+				var searchCondition = { CategoryID: categoryId, page: 1 }; // Dữ liệu tìm kiếm
+
+				$.ajax({
+					url: "/Product/Search", // Endpoint xử lý tìm kiếm
+					type: "GET",
+					data: searchCondition, // Gửi CategoryID và trang đầu tiên
+					success: function (data) {
+						$("#searchResult").html(data); // Hiển thị kết quả vào #searchResult
+					},
+					error: function () {
+						alert("Có lỗi xảy ra trong quá trình tìm kiếm.");
+					}
+				});
+			});
+		});
+		
+
+		
+
+
+	</script>
+}
+
+<!-- Benefit -->
+
+
+
+
+

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<SV21T1020526.DomainModels.Order>
+@{
+    
+}
+
+<div class="container" >
+    <h2>@ViewData["Title"]</h2>
+        <div style="margin-top:170px; margin-left:200px;margin-right:200px">
+    @foreach(var item in Model){
+            <div class="card" style="margin-bottom:50px;">
+            <div class="card-header" >
+                <h5>Thông tin đơn hàng</h5>
+            </div>
+
+
+            <div class="card-body">
+                <p><strong>Mã đơn hàng:</strong> @item.OrderID</p>
+                <p><strong>Tên người nhận:</strong> @item.CustomerName</p>
+                <p><strong>Trạng thái hiện tại:</strong> <span class="badge badge-primary">@item.StatusDescription</span></p>
+            </div>
+            </div>
+
+
+    }
+        </div>
+    <!-- Thông tin đơn hàng -->
+    
+
+    @* <div class="card mt-3"> *@
+    @*     <div class="card-header"> *@
+    @*         <h5>Lịch sử trạng thái vận chuyển</h5> *@
+    @*     </div> *@
+    @*     <div class="card-body"> *@
+    @*         <table class="table table-striped"> *@
+    @*             <thead> *@
+    @*                 <tr> *@
+    @*                     <th>Thời gian</th> *@
+    @*                     <th>Trạng thái</th> *@
+    @*                 </tr> *@
+    @*             </thead> *@
+    @*             <tbody> *@
+    @*                 @for(int i=1 ;i<=1;i++) *@
+    @*                 { *@
+    @*                     <tr> *@
+    @*                         <td>2/1/2025 10:03 </td> *@
+    @*                         <td>Đơn hàng mới</td> *@
+    @*                     </tr> *@
+    @*                     <tr> *@
+    @*                         <td>2/1/2025 10:03 </td> *@
+    @*                         <td>Đơn Hàng đã duyệt</td> *@
+    @*                     </tr> *@
+    @*                 } *@
+    @*             </tbody> *@
+    @*         </table> *@
+    @*     </div> *@
+    @* </div> *@
+
+    <!-- Button quay lại -->
+    <div class="mt-3 text-right" style="margin:200px" >
+        <a href="@Url.Action("Index", "Home")"   class="btn btn-secondary">Quay lại trang chủ</a>
+    </div>
+</div>

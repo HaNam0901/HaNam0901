@@ -1,0 +1,12 @@
+D:\DHNam\SV21T1020526\SV21T1020526.ServiceDefaults\bin\Debug\net8.0\SV21T1020526.ServiceDefaults.deps.json
+D:\DHNam\SV21T1020526\SV21T1020526.ServiceDefaults\bin\Debug\net8.0\SV21T1020526.ServiceDefaults.dll
+D:\DHNam\SV21T1020526\SV21T1020526.ServiceDefaults\bin\Debug\net8.0\SV21T1020526.ServiceDefaults.pdb
+D:\DHNam\SV21T1020526\SV21T1020526.ServiceDefaults\obj\Debug\net8.0\SV21T1020526.ServiceDefaults.csproj.AssemblyReference.cache
+D:\DHNam\SV21T1020526\SV21T1020526.ServiceDefaults\obj\Debug\net8.0\SV21T1020526.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+D:\DHNam\SV21T1020526\SV21T1020526.ServiceDefaults\obj\Debug\net8.0\SV21T1020526.ServiceDefaults.AssemblyInfoInputs.cache
+D:\DHNam\SV21T1020526\SV21T1020526.ServiceDefaults\obj\Debug\net8.0\SV21T1020526.ServiceDefaults.AssemblyInfo.cs
+D:\DHNam\SV21T1020526\SV21T1020526.ServiceDefaults\obj\Debug\net8.0\SV21T1020526.ServiceDefaults.csproj.CoreCompileInputs.cache
+D:\DHNam\SV21T1020526\SV21T1020526.ServiceDefaults\obj\Debug\net8.0\SV21T1020526.ServiceDefaults.dll
+D:\DHNam\SV21T1020526\SV21T1020526.ServiceDefaults\obj\Debug\net8.0\refint\SV21T1020526.ServiceDefaults.dll
+D:\DHNam\SV21T1020526\SV21T1020526.ServiceDefaults\obj\Debug\net8.0\SV21T1020526.ServiceDefaults.pdb
+D:\DHNam\SV21T1020526\SV21T1020526.ServiceDefaults\obj\Debug\net8.0\ref\SV21T1020526.ServiceDefaults.dll

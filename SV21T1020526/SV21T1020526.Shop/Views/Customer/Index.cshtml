@@ -1,0 +1,56 @@
+﻿@model SV21T1020526.DomainModels.Customer;
+@{
+    
+
+}
+<div class="box box-danger" style="margin:200px">
+    <div class="box-body">
+        <form action="~/Customer/Edit/@Model.CustomerId" method="post">
+            <input type="hidden" name="@nameof(Model.CustomerId)" value="@Model.CustomerId" />
+            <div class="form-group">
+                <label>Tên khách hàng:</label>
+                <p class="form-control form-control-static">@Model.CustomerName</p>
+            </div>
+            <div class="form-group">
+                <label>Tên giao dịch:</label>
+                <p class="form-control form-control-static">@Model.ContactName</p>
+
+            </div>
+            <div class="form-group">
+                <label>Điện thoại:</label>
+                <p class="form-control form-control-static">@Model.Phone</p>
+
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <p class="form-control form-control-static">@Model.Email</p>
+
+            </div>
+            <div class="form-group">
+                <label>Địa chỉ:</label>
+                <p class="form-control form-control-static">@Model.Address</p>
+
+            </div>
+
+            <div class="form-group">
+                <label>Tỉnh thành:</label>
+                <p class="form-control form-control-static">@Model.Province</p>
+            </div>
+
+            <div class="form-group">
+                <label>Trạng thái:</label>
+                <p class="form-control form-control-static">@(Model.IsLocked ? "tài khoản bị khóa" : "tài khoản hoạt động")</p>
+            </div>
+            <div class="form-group text-right">
+                
+                    <button type="submit" class="btn btn-danger">Sửa thông tin</button>
+
+                
+                <a href="~/" class="btn btn-default">Quay lại</a>
+
+
+            </div>
+        </form>
+    </div>
+
+</div>

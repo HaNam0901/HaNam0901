@@ -1,0 +1,176 @@
+﻿
+@model SV21T1020526.Shop.Models.ProductSearchInput
+@{
+}
+
+
+
+
+	
+	<div class="super_container">
+
+		<!-- Header -->
+
+		<div class="fs_menu_overlay"></div>
+
+		
+
+		<div class="container product_section_container">
+			<div class="row">
+
+				<div class="col product_section clearfix">
+
+					<!-- Breadcrumbs -->
+				<div class="row">
+					<div class="breadcrumbs d-flex flex-row align-items-center">
+						<form id="frmSearchInput" method="get" action="~/Product/Search" class="form-inline col">
+							<input type="hidden" name="@nameof(Model.PageSize)" value="@Model.PageSize" />
+
+							
+							<div class="col-sm-4">
+								<div class="form-group row">
+									<label class="col-sm-4 col-form-label">Giá từ:</label>
+									<div class="col-sm-8">
+										
+										<input type="text" class="form-control" name="@nameof(Model.MinPrice)" value="@Model.MinPrice" placeholder="Giá từ">
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-sm-4">
+								<div class="form-group row">
+									<label class="col-sm-2 col-form-label">Đến:</label>
+									<div class="col-sm-10">
+
+										<input type="text" class="form-control" name="@nameof(Model.MaxPrice)" value="@Model.MaxPrice" placeholder="Đến">
+
+									</div>
+								</div>
+							</div>
+							
+								<div class="col-sm-4">
+								
+									<div class="input-group">
+									<input name="@nameof(Model.SearchValue)" value="@Model.SearchValue" type="text" class="form-control" placeholder="Nhập mặt hàng hàng cần tìm"
+											   
+											   autofocus="">
+										<div class="input-group-btn">
+
+											<button class="btn my-2 my-sm-0" type="submit">Tìm kiếm</button>
+
+										</div>
+									</div>
+								</div>
+						
+
+						</form>
+					</div>
+				</div>
+				
+
+				<!-- Sidebar -->
+
+				<div class="sidebar">
+					<div class="sidebar_section">
+						<div class="sidebar_title">
+							<h5>Loại hàng</h5>
+						</div>
+						<ul class="sidebar_categories">
+							@foreach (var item in SV21T1020526.BusinessLayers.CommonDataService.ListOfCategorys())
+							{
+								<li>
+									<a href="javascript:void(0);"
+									   class="category-link"
+									   data-categoryid="@item.CategoryId">
+										@item.CategoryName
+									</a>
+								</li>
+							}
+						</ul>
+					</div>
+
+				
+
+				
+
+				</div>
+
+				<!-- Product Sorting -->
+
+				
+					
+
+						
+
+						
+
+						
+					<!-- Main Content -->
+				
+					<div id="searchResult">
+
+					 </div> 
+				
+					
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+@section scripts {
+	<script>
+				$(document).ready(function () {
+			// Lắng nghe sự kiện click trên các link loại hàng
+			$(".category-link").click(function (e) {
+				e.preventDefault(); // Ngăn điều hướng mặc định
+
+				var categoryId = $(this).data("categoryid"); // Lấy CategoryID từ thuộc tính data
+				var searchCondition = { CategoryID: categoryId, page: 1 }; // Dữ liệu tìm kiếm
+
+				$.ajax({
+					url: "/Product/Search", // Endpoint xử lý tìm kiếm
+					type: "GET",
+					data: searchCondition, // Gửi CategoryID và trang đầu tiên
+					success: function (data) {
+						$("#searchResult").html(data); // Hiển thị kết quả vào #searchResult
+					},
+					error: function () {
+						alert("Có lỗi xảy ra trong quá trình tìm kiếm.");
+					}
+				});
+			});
+		});
+
+
+				// Hàm tìm kiếm
+		function doSearch(page) {
+			var searchCondition = $("#frmSearchInput").serializeArray();
+			searchCondition.push({ name: "page", value: page });
+			var action = $("#frmSearchInput").prop("action");
+			var method = $("#frmSearchInput").prop("method");
+			
+			$.ajax({
+				url: action,
+				type: method,
+				data: searchCondition,
+				success: function (data) {
+					$("#searchResult").html(data); // Cập nhật kết quả vào phần tử #searchResult
+				}
+			});
+
+		}
+
+
+		$(document).ready(function () {
+			doSearch(@Model.Page);
+			$("#frmSearchInput").submit(function (e) {
+				e.preventDefault();
+				doSearch(1);
+			});
+		});
+		
+
+	</script>
+}
